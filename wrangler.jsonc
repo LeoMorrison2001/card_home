@@ -1,5 +1,0 @@
-{
-    "name": "card-home", // 使用 CI 系统期望的名称
-    "compatibility_date": "2025-11-23",
-    "pages_build_output_dir": "./dist" // 针对 Pages 部署，这是指定资产目录的推荐字段
-}
