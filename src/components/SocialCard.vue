@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card-premium p-6 flex flex-col justify-between group cursor-pointer transition-colors duration-300"
+    class="card-premium bg-[#121212] p-6 flex flex-col justify-between group cursor-pointer transition-colors duration-300"
     :class="hoverBgClass"
     @click="handleClick"
   >

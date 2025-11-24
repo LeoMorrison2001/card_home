@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card-premium p-0 relative group cursor-pointer min-h-[160px] overflow-hidden"
+    class="card-premium p-0 relative group cursor-pointer min-h-[160px] overflow-hidden transition-all duration-300 hover:brightness-110"
     :class="bgColor"
     @click="handleClick"
   >

@@ -1,9 +1,9 @@
 <template>
-  <div class="card-premium p-8 lg:p-10 flex flex-col justify-between group">
+  <div class="card-premium bg-[#121212] p-8 lg:p-10 flex flex-col justify-between group">
     <div class="flex justify-between items-start">
       <div>
         <div class="flex items-center gap-2 mb-3">
-          <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <span class="text-neutral-400 text-xs font-bold tracking-widest uppercase">{{ status }}</span>
         </div>
         <h2 class="text-neutral-500 font-bold text-sm tracking-wide uppercase">{{ title }}</h2>
@@ -17,7 +17,7 @@
     <div class="my-auto py-6">
       <h1 class="text-4xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
         {{ greeting }} 
-        <span class="transition-colors duration-300 group-hover:text-[#8b5cf6] cursor-default">{{ name }}</span><br>
+        <span class="transition-colors duration-300 group-hover:text-emerald-400 cursor-default">{{ name }}</span><br>
         <span class="text-neutral-500 block mt-4 text-2xl lg:text-4xl">{{ tagline }}</span>
       </h1>
     </div>

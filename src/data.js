@@ -16,7 +16,7 @@ export const skillsData = {
     title: '技术栈',
     items: [
         { name: '架构设计', level: '专家', percent: 90, color: 'bg-brand-blue' },
-        { name: '全栈开发', level: '精通', percent: 95, color: 'bg-white' },
+        { name: '全栈开发', level: '精通', percent: 95, color: 'bg-emerald-500' },
         { name: 'DevOps', level: '熟练', percent: 85, color: 'bg-neutral-500' }
     ]
 }
@@ -26,8 +26,10 @@ export const socialData = {
     label: '联系',
     name: 'WeChat',
     copyText: 'wechat_id_888',
-    hoverBgClass: 'hover:bg-[#07c160]',
-    iconHoverClass: 'group-hover:bg-white group-hover:text-[#07c160]'
+    hoverBgClass: 'hover:bg-emerald-500',
+    iconHoverClass: 'group-hover:bg-white group-hover:text-emerald-500',
+    textClass: 'text-neutral-500 group-hover:text-white/80',
+    actionIconClass: 'text-neutral-600 group-hover:text-white/80'
 }
 
 export const locationData = {
@@ -38,7 +40,7 @@ export const locationData = {
 export const brandData = {
     icon: Github,
     label: '开源主页',
-    bgColor: 'hover:bg-[#333]',
+    bgColor: 'bg-blue-500',
     link: 'https://github.com'
 }
 

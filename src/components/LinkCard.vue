@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card-premium p-6 flex flex-col justify-between group cursor-pointer hover:bg-white hover:text-black transition-colors"
+    class="card-premium bg-[#121212] p-6 flex flex-col justify-between group cursor-pointer hover:bg-white hover:text-black transition-colors"
     @click="handleClick"
   >
     <div class="flex justify-between items-start">

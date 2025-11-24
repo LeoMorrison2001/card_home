@@ -1,5 +1,5 @@
 <template>
-  <div class="card-premium p-0 relative overflow-hidden group min-h-[200px]">
+  <div class="card-premium bg-[#121212] p-0 relative overflow-hidden group min-h-[200px]">
     <!-- 地图背景 -->
     <div class="absolute inset-0 bg-neutral-800 transition-transform duration-700 group-hover:scale-110">
       <img 

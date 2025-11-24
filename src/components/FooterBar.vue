@@ -8,7 +8,7 @@
         v-for="(link, index) in links"
         :key="index"
         :href="link.url"
-        class="hover:text-white transition-colors"
+        class="hover:text-emerald-400 transition-colors"
       >
         {{ link.name }}
       </a>

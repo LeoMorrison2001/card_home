@@ -5,8 +5,11 @@
   --color-neutral-850: #1f1f1f;
   --color-neutral-900: #171717;
   --color-neutral-950: #0a0a0a;
-  --color-brand-blue: #2563eb;
-  --color-brand-accent: #3b82f6;
+  --color-brand-blue: #3b82f6;
+  --color-brand-accent: #2563eb;
+  --color-brand-emerald: #10b981;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
   --font-family-sans: "Inter", "Noto Sans SC", sans-serif;
 }
 
@@ -28,9 +31,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     scrollbar-width: none;
 }
 
-/* 核心卡片样式 */
+/* 核心卡片样式 - 背景色由各组件通过 Tailwind 类控制 */
 .card-premium {
-    background-color: #121212;
     border: 1px solid #1f1f1f;
     border-radius: 1rem;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
