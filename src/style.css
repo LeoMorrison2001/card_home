@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* 自定义主题配置 (从 tailwind.config.js 迁移) */
+@theme {
+  --color-neutral-850: #1f1f1f;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+  --color-brand-blue: #2563eb;
+  --color-brand-accent: #3b82f6;
+  --font-family-sans: "Inter", "Noto Sans SC", sans-serif;
+}
 
 /* 隐藏滚动条 */
 html, body {
