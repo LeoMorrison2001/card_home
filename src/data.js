@@ -41,13 +41,13 @@ export const brandData = {
     icon: Github,
     label: '开源主页',
     bgColor: 'bg-blue-500',
-    link: 'https://github.com'
+    link: 'https://github.com/LeoMorrison2001'
 }
 
 export const linkData = {
     label: 'HOME',
-    url: 'leomorrison.dev',
-    link: 'https://example.com'
+    url: 'home.maxcosmos.top',
+    link: 'https://home.maxcosmos.top'
 }
 
 
