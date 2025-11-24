@@ -1,33 +1,47 @@
 <template>
-  <div class="card-premium bg-[#121212] p-0 relative overflow-hidden group min-h-[200px]">
+  <div
+    class="card-premium bg-[#121212] p-0 relative overflow-hidden group min-h-[200px]"
+    @touchstart="isPressed = true"
+    @touchend="isPressed = false"
+    @touchcancel="isPressed = false"
+    @mouseenter="isHovered = true"
+    @mouseleave="isHovered = false"
+  >
     <!-- 地图背景 -->
-    <div class="absolute inset-0 bg-neutral-800 transition-transform duration-700 group-hover:scale-110">
-      <img 
-        :src="mapImage" 
-        class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500"
+    <div
+      class="absolute inset-0 bg-neutral-800 transition-transform duration-700"
+      :class="isPressed || isHovered ? 'scale-110' : ''"
+    >
+      <img
+        :src="mapImage"
+        class="w-full h-full object-cover opacity-60 transition-all duration-500"
+        :class="isPressed || isHovered ? 'grayscale-0' : 'grayscale'"
         alt="Map Location"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
     </div>
 
     <!-- 内容 -->
-    <div class="relative h-full p-6 flex flex-col justify-between z-10">
+    <div class="relative h-full p-4 sm:p-6 flex flex-col justify-between z-10">
       <div class="flex justify-between items-start">
-        <div class="bg-white/10 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full">
-          <div class="flex items-center gap-2">
+        <div class="bg-white/10 backdrop-blur-md border border-white/10 px-2 sm:px-3 py-1 rounded-full">
+          <div class="flex items-center gap-1.5 sm:gap-2">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span class="text-xs font-bold text-white tracking-wider uppercase">{{ location }}</span>
+            <span class="text-[10px] sm:text-xs font-bold text-white tracking-wider uppercase">{{ location }}</span>
           </div>
         </div>
-        <MapPin class="w-5 h-5 text-neutral-400 group-hover:text-white transition-colors" />
+        <MapPin
+          class="w-4 h-4 sm:w-5 sm:h-5 transition-colors"
+          :class="isPressed || isHovered ? 'text-white' : 'text-neutral-400'"
+        />
       </div>
 
       <div>
-        <p class="text-neutral-400 text-xs font-bold uppercase tracking-widest mb-1">Local Time</p>
-        <p class="text-3xl font-mono font-bold text-white">{{ time }}</p>
+        <p class="text-neutral-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">Local Time</p>
+        <p class="text-2xl sm:text-3xl font-mono font-bold text-white">{{ time }}</p>
       </div>
     </div>
   </div>
@@ -36,6 +50,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { MapPin } from 'lucide-vue-next'
+
+const isPressed = ref(false)
+const isHovered = ref(false)
 
 const props = defineProps({
   location: {
@@ -53,10 +70,10 @@ let timer
 
 const updateTime = () => {
   const now = new Date()
-  time.value = now.toLocaleTimeString('en-US', { 
-    hour: '2-digit', 
+  time.value = now.toLocaleTimeString('en-US', {
+    hour: '2-digit',
     minute: '2-digit',
-    hour12: false 
+    hour12: false
   })
 }
 

@@ -25,7 +25,7 @@ export const socialData = {
     icon: MessageCircle,
     label: '联系',
     name: 'WeChat',
-    copyText: 'wechat_id_888',
+    copyText: 'LeoMorrison2001',
     hoverBgClass: 'hover:bg-emerald-500',
     iconHoverClass: 'group-hover:bg-white group-hover:text-emerald-500',
     textClass: 'text-neutral-500 group-hover:text-white/80',

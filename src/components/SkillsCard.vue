@@ -1,12 +1,12 @@
 <template>
-  <div class="card-premium bg-[#121212] p-6 flex flex-col justify-center">
-    <div class="flex items-center justify-between mb-6">
-      <span class="text-xs font-bold text-neutral-500 uppercase tracking-wider">{{ title }}</span>
-      <BarChart2 class="w-4 h-4 text-neutral-500" />
+  <div class="card-premium bg-[#121212] p-4 sm:p-6 flex flex-col justify-center">
+    <div class="flex items-center justify-between mb-4 sm:mb-6">
+      <span class="text-[10px] sm:text-xs font-bold text-neutral-500 uppercase tracking-wider">{{ title }}</span>
+      <BarChart2 class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-500" />
     </div>
-    <div class="space-y-4">
+    <div class="space-y-3 sm:space-y-4">
       <div v-for="(skill, index) in skills" :key="index">
-        <div class="flex justify-between text-xs font-bold text-white mb-2">
+        <div class="flex justify-between text-[10px] sm:text-xs font-bold text-white mb-1 sm:mb-2">
           <span>{{ skill.name }}</span>
           <span class="text-brand-blue">{{ skill.level }}</span>
         </div>

@@ -70,10 +70,10 @@ const handleNavigate = (page) => {
 </script>
 
 <template>
-  <div class="w-full max-w-7xl mx-auto px-6 py-12 lg:px-12 lg:py-16 flex-grow flex flex-col">
+  <div class="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-12 py-8 sm:py-10 lg:py-16 flex-grow flex flex-col">
     <!-- Grid 布局 -->
     <div class="flex-grow flex flex-col justify-center">
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 auto-rows-[minmax(180px,auto)]">
 
         <!-- 1. 主档案卡片 -->
         <Transition name="card-list">

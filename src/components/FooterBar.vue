@@ -8,6 +8,7 @@
         v-for="(link, index) in links"
         :key="index"
         :href="link.url"
+        target="_blank"
         class="hover:text-emerald-400 transition-colors"
       >
         {{ link.name }}
@@ -29,8 +30,8 @@ defineProps({
   links: {
     type: Array,
     default: () => [
-      { name: 'X', url: '#' },
-      { name: 'NOTION', url: '#' },
+      { name: 'X', url: 'https://x.com/LeoMorrison2001' },
+      { name: 'NOTION', url: 'https://leomorrison.notion.site/NOTION-TO-LIFE-MANAGER-2b536e24b8e4800d8c93d0fe6119e9fb' },
       { name: 'YOUTUBE', url: '#' }
     ]
   }

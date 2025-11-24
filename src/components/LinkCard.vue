@@ -1,17 +1,17 @@
 <template>
   <div
-    class="card-premium bg-[#121212] p-6 flex flex-col justify-between group cursor-pointer hover:bg-white hover:text-black transition-colors"
+    class="card-premium bg-[#121212] p-4 sm:p-6 flex flex-col justify-between group cursor-pointer hover:bg-white hover:text-black active:bg-neutral-300 active:scale-95 transition-all duration-200"
     @click="handleClick"
   >
     <div class="flex justify-between items-start">
-      <div class="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center group-hover:border-black transition-colors">
-        <Globe class="w-5 h-5" />
+      <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-neutral-700 flex items-center justify-center group-hover:border-black transition-colors">
+        <Globe class="w-4 h-4 sm:w-5 sm:h-5" />
       </div>
-      <ArrowUpRight class="w-5 h-5 text-neutral-500 group-hover:text-black transition-colors" />
+      <ArrowUpRight class="w-4 h-4 sm:w-5 sm:h-5 text-neutral-500 group-hover:text-black transition-colors" />
     </div>
-    <div>
-      <p class="text-xs text-neutral-500 mb-1 group-hover:text-black/60">{{ label }}</p>
-      <p class="text-base font-bold">{{ url }}</p>
+    <div class="min-w-0">
+      <p class="text-[10px] sm:text-xs text-neutral-500 mb-1 group-hover:text-black/60">{{ label }}</p>
+      <p class="text-sm sm:text-base font-bold truncate" :title="url">{{ url }}</p>
     </div>
   </div>
 </template>

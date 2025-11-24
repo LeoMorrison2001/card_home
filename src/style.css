@@ -35,9 +35,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .card-premium {
     border: 1px solid #1f1f1f;
     border-radius: 1rem;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent; /* 移除移动端点击高亮 */
+    user-select: none; /* 防止长按选择文本 */
 }
 
 .card-premium:hover {
@@ -45,6 +47,37 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     border-color: #2a2a2a;
     box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
     z-index: 10;
+}
+
+/* 移动端触摸反馈 - 使用媒体查询确保只在触摸设备上生效 */
+@media (hover: none) and (pointer: coarse) {
+    .card-premium.cursor-pointer:active {
+        transform: scale(0.97);
+        transition: transform 0.1s ease;
+    }
+
+    /* 为不同类型的卡片添加特定的触摸反馈 */
+    .card-premium.cursor-pointer:active::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.1);
+        pointer-events: none;
+        animation: touchFeedback 0.3s ease;
+    }
+}
+
+@keyframes touchFeedback {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* 背景渐变 */
