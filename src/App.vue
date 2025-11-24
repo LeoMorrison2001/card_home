@@ -35,7 +35,7 @@ const showToast = (msg) => {
 </script>
 
 <template>
-  <div class="bg-neutral-950 min-h-screen text-white font-sans selection:bg-brand-blue selection:text-white flex flex-col antialiased">
+  <div class="bg-[#0a0a0a] min-h-screen text-white font-sans selection:bg-brand-blue selection:text-white flex flex-col antialiased">
     <!-- 极简背景 -->
     <div class="fixed inset-0 pointer-events-none -z-10 bg-gradient-custom"></div>
 

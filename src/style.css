@@ -22,8 +22,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 /* 核心卡片样式 */
 .card-premium {
-    background-color: #171717;
-    border: 1px solid #262626;
+    background-color: #121212;
+    border: 1px solid #1f1f1f;
     border-radius: 1rem;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
@@ -32,7 +32,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .card-premium:hover {
     transform: translateY(-4px);
-    border-color: #404040;
+    border-color: #2a2a2a;
     box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
