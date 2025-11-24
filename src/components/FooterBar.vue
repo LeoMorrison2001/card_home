@@ -1,7 +1,9 @@
 <template>
-  <footer class="mt-16 flex justify-between items-center text-neutral-600 text-xs font-bold uppercase tracking-widest border-t border-neutral-900 pt-8">
-    <p>&copy; {{ year }} {{ name }}.</p>
-    <div class="flex gap-6">
+  <footer class="mt-20 pt-10 border-t border-white/5 flex flex-row items-center justify-between gap-8 text-sm text-neutral-600">
+    <div class="font-mono">
+      &copy; {{ year }} {{ name }}.
+    </div>
+    <div class="flex gap-8">
       <a
         v-for="(link, index) in links"
         :key="index"
@@ -28,8 +30,8 @@ defineProps({
     type: Array,
     default: () => [
       { name: 'X', url: '#' },
-      { name: 'Notion', url: '#' },
-      { name: 'Youtube', url: '#' }
+      { name: 'NOTION', url: '#' },
+      { name: 'YOUTUBE', url: '#' }
     ]
   }
 })
